@@ -1,5 +1,6 @@
 var spans = document.getElementsByTagName("span");
 var good = new Array();
+var wordsCount = 0
 
 for (var i = 0; i < spans.length; i++) {
 	if(spans[i].className == "lblUsername") {
@@ -16,5 +17,15 @@ console.log(good[1].innerHTML + "" + good[2].innerHTML + "" + good[3].innerHTML)
 
 
 var txts = document.getElementsByClassName("txtInput");
-console.log(txts[0]);
-txts[0].value = good[1].innerHTML + "" + good[2].innerHTML + "" + good[3].innerHTML;
+var fullString = good[1].innerHTML + "" + good[2].innerHTML + "" + good[3].innerHTML;
+var words = fullString.split(" ");
+
+
+txts[0].value = words[wordsCount];
+document.body.onkeyup = function(e) {
+	if(e.keyCode == 32) {
+		wordsCount = wordsCount + 1;
+		console.log(words[wordsCount]);
+		txts[0].value = words[wordsCount];
+	}
+}

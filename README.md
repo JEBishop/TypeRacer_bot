@@ -1,5 +1,5 @@
 # TypeRacer_bot
-A small JS script to access the DOM of the TypeRacer and play/win for you
+A small JS script to access the DOM of the TypeRacer practice page and play/win for you
 
 TypeRacer is a multiplayer online browser-based typing game - the object is to finish typing the paragraph before your opponent
 
